@@ -29,5 +29,10 @@ class ProductPage(BasePage):
         product_to_add = self.browser.find_element(*ProductPageLocators.ACTUAL_PRODUCT_PRICE)
         assert self.is_text_of_two_elem_similar(product_added, product_to_add)
 
+    def no_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.POPUP_SUCCESS)
+
+    def success_message_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.POPUP_SUCCESS)
 
 

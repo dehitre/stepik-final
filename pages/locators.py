@@ -20,3 +20,7 @@ class ProductPageLocators():
     POPUP_WITH_PRICE = (By.XPATH,'//div[contains(@class,"alert-info")]')
     ADDED_PRODUCT_PRICE = (By.XPATH,'//div[contains(@class,"alert-info")]/div/p/strong')
     ACTUAL_PRODUCT_PRICE = (By.XPATH,'//div[contains(@class,"product_main")]/p[1]')
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
